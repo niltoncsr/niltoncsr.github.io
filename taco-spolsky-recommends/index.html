@@ -62,7 +62,8 @@
 	CandidateChooser = {
 		name: "Taco Spolsky",
 		recommend: function(e) {
-			var link = document.createElement('a');
+			var link = document.createElement('a'),
+					button = document.getElementById('candidate');
 
 			if(e.target.id != 'choose') {
 				return;
@@ -89,7 +90,8 @@
 			link.textContent = this.name;
 			link.href = 'mailto:niltoncms@gmail.com?subject=Congrats,you are hired!';
 
-			document.getElementById('candidate').appendChild(link);
+			if(!button.children.length)
+				button.appendChild(link);
 		}
 	}
 
