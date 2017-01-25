@@ -1,0 +1,23 @@
+#page-header
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: space-between
+	border-bottom: 1px solid #999
+	h1
+		font-size: 1.5em
+	p
+		font-size: .9em
+
+#site-nav
+	ul
+		display: flex
+		list-style-type: none
+		li
+			a
+				padding: .5em
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+			&:not(:first-child)
+				margin-left: 2em
